@@ -83,6 +83,7 @@ def do_battle(user, opp):
 
 def opp_logic(cards, opponent):
     for card in cards:
+        pass
 
 
 def main():
