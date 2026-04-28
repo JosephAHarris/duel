@@ -54,10 +54,12 @@ def main():
     player_choice = get_input(1, 4)
     player_character = get_character(player_choice)
     player_character.player = True
+    print(f"You have chosen {player_character.name}. Thrust {player_character.thrust}, Strike {player_character.strike}, Smash {player_character.smash}.")
 
     print("Choose your opponent!\n1. Kumayari, the Samurai\n2. Sir Frederick, the Knight\n3. Kiln, the Adventurer\n4. Sint Drage, the Dragon Warrior")
     opponent_choice = get_input(1, 4)
     opponent_character = get_character(opponent_choice)
+    print(f"Your foe is {opponent_character.name}. Thrust {opponent_character.thrust}, Strike {opponent_character.strike}, Smash {opponent_character.smash}.")
 
     #do_battle should loop until either the player or the computer character's health drops below 1, hen print 
     print(f"The battle between {player_character.name} and {opponent_character.name} begins!")
