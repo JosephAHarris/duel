@@ -7,15 +7,15 @@ def take_turn(attack, defense):
     attack.cards = draw_attack_cards()
     defense.cards = draw_defense_cards()
     if attack.player == True:
-        print("Choose your attack!\n")
-        print(f"1. {attack.cards[0][0]} {attack.cards[0][1] + attack.thrust}\n2. {attack.cards[1][0]} {attack.cards[1][1] + attack.strike}\n3. {attack.cards[2][0]} {attack.cards[2][1] + attack.smash}")
+        print("Choose your attack!")
+        print(f"1. {attack.cards[0][0]} {attack.cards[0][1]} ({attack.cards[0][1] + attack.thrust} total power)\n2. {attack.cards[1][0]} {attack.cards[1][1]} ({attack.cards[1][1] + attack.strike} total power)\n3. {attack.cards[2][0]} {attack.cards[2][1]} ({attack.cards[2][1] + attack.smash} total power)\n")
         user_input = get_input(1 , 3)
         attack.cards = attack.cards[user_input - 1]
     else:
         attack.cards = opp_attack_logic(attack.cards)
 
     if defense.player == True:
-        print("Choose your defense!\n")
+        print("Choose your defense!")
         print(f"1. {defense.cards[0][0]} {defense.cards[0][1]}\n2. {defense.cards[1][0]} {defense.cards[1][1]}\n3. {defense.cards[2][0]} {defense.cards[2][1]}")
         user_input = get_input(1 , 3)
         defense.cards = defense.cards[user_input - 1]

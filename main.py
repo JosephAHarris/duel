@@ -58,7 +58,7 @@ def do_battle(user, opp):
 
 def main():
     #Choosing a warrior returns a copy of the character, allowing mirror matches.
-    print("Choose your warrior!\n\n1. Kumayari, the Samurai\n2. Sir Frederick, the Knight\n3. Kiln, the Adventurer\n4. Sint Drage, the Dragon Warrior")
+    print("Choose your warrior!\n1. Kumayari, the Samurai\n2. Sir Frederick, the Knight\n3. Kiln, the Adventurer\n4. Sint Drage, the Dragon Warrior")
     player_choice = get_input(1, 4)
     player_character = get_character(player_choice)
     player_character.player = True
